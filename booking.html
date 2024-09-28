@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button.booked {
+            background-color: red;
+            cursor: not-allowed;
+        }
+    </style>
+    <script>
+        function bookSlot(button) {
+            button.textContent = "Booked";
+            button.classList.add('booked');
+            button.disabled = true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Appointment Booking (Week 1)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Time Slot</th>
+                <th>Booking</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10:00 - 10:10</td>
+                <td><button onclick="bookSlot(this)">Book</button></td>
+            </tr>
+            <tr>
+                <td>10:10 - 10:20</td>
+                <td><button onclick="bookSlot(this)">Book</button></td>
+            </tr>
+            <tr>
+                <td>10:20 - 10:30</td>
+                <td><button onclick="bookSlot(this)">Book</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Appointment Booking (Week 2)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Time Slot</th>
+                <th>Booking</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10:00 - 10:10</td>
+                <td><button onclick="bookSlot(this)">Book</button></td>
+            </tr>
+            <tr>
+                <td>10:10 - 10:20</td>
+                <td><button onclick="bookSlot(this)">Book</button></td>
+            </tr>
+            <tr>
+                <td>10:20 - 10:30</td>
+                <td><button onclick="bookSlot(this)">Book</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Repeat this structure for the remaining weeks (up to week 8) -->
+</body>
+</html>
